@@ -1,0 +1,16 @@
+<div class = "container">
+  <form (ngSubmit) ="onSubmit(k)" #k ="ngForm">
+    <label for="name">Name</label>
+    <input type="text" name = "name" class = "form-control" [(ngModel)] = "user.name">
+    <label for="Address">Address</label>
+    <textarea name="address" id="address" cols="30" rows="10" class = "form-control" [(ngModel)] = "user.address">Address</textarea>
+    <button type="submit" class = "btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<app-output *ngFor="let user of users"
+[user]="user"
+></app-output>
+
+<!-- <div *ngIf="isShow">ABC</div>
+<button (click)="onToggle()">Toggle</button> -->
